@@ -22,4 +22,19 @@ Menuntut ilmu, belajar kubernetes
 
 ## Mengakses Pod
 
-- `kubectl port-forward namapod portAkses:portPod` hanya dilakukan untuk test di internal/local kubernetes, tidak berarti akses diinternet akan menggunakan cara ini
+- `kubectl port-forward namapod portAkses:portPod` hanya dilakukan untuk test di internal/local kubernetes, tidak berarti akses di internet akan menggunakan cara ini
+
+
+## Melihat Label
+
+- `kubectl get pods --show-labels`
+
+
+## Mencari Pod berdasarkan Label
+
+- `kubectl get pods -l key`
+- `kubectl get pods -l key=value`
+- `kubectl get pods -l '!key'`
+- `kubectl get pods -l key!=value`
+- `kubectl get pods -l 'key in (val1, val2)'`
+- `kubectl get pods -l 'key notin (val1, val2)'`

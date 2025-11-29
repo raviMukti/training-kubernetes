@@ -1,0 +1,14 @@
+apiVersion: v1
+kind: Pod
+metadata:
+  name: nginx-finance
+  labels:
+    team: finance
+    version: v1.0
+    environment: production
+spec:
+  containers:
+    - name: nginx-finance
+      image: nginx
+      ports:
+        - containerPort: 80
