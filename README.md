@@ -38,3 +38,24 @@ Menuntut ilmu, belajar kubernetes
 - `kubectl get pods -l key!=value`
 - `kubectl get pods -l 'key in (val1, val2)'`
 - `kubectl get pods -l 'key notin (val1, val2)'`
+
+
+## Namespace
+
+Adalah grouping sebuah pod/cluster, ini bukan untuk mengisolasi resource karena setiap resource masih bisa berinteraksi satu sama lain
+
+## Melihat namespace
+
+- `kubectl get namespaces`
+
+## Membuat namespace
+
+- `kubectl create -f namafile.yaml`
+
+## Membuat pod di namespace
+
+- `kubectl create -f namafile.yaml --namespace namespace`
+
+## Menghapus namespace
+
+- `kubectl delete namespace namanamespace` semua resource yang ada pada namespace akan ikut terhapus, berhati - hatilah
