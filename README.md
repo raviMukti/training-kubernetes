@@ -59,3 +59,10 @@ Adalah grouping sebuah pod/cluster, ini bukan untuk mengisolasi resource karena 
 ## Menghapus namespace
 
 - `kubectl delete namespace namanamespace` semua resource yang ada pada namespace akan ikut terhapus, berhati - hatilah
+
+## Menghapus pod
+
+- `kubectl delete pod namapod`
+- `kubectl delete pod namapod1 namapod2 namapod3`
+- `kubectl delete pod -l key=value`
+- `kubectl delete pod --all --namespace namanamespace`
