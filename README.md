@@ -66,3 +66,7 @@ Adalah grouping sebuah pod/cluster, ini bukan untuk mengisolasi resource karena 
 - `kubectl delete pod namapod1 namapod2 namapod3`
 - `kubectl delete pod -l key=value`
 - `kubectl delete pod --all --namespace namanamespace`
+
+## Probe
+
+Probe adalah pengecekan di kubernetes (liveness, readiness, startup probe). Kubelet akan mengecek liveness, untuk mengecek kapan perlu me-restart pod (healtcheck). Kubelet akan menggunakan readiness probe untuk mengecek apakah pod siap menerima traffic. Kubelet menggunakan startup probe untuk mengecek apakah pod sudah berjalan, jika belum berjalan maka kubelet tidak akan melakukan pengecekan liveness dan readiness. Startup probe cocok digunakan untuk pod yang membutuhkan proses startup lama, ini dapat digunakan untuk memastikan pod tidak mati oleh kubelet sebelum selesai berjalan dengan sempurna. Mekanisme pengecekannya ada 3, http get, tcp socket, dan command exec
